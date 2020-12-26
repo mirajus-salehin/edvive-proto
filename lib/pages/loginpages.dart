@@ -70,71 +70,260 @@ class StudentLoginScreen extends StatelessWidget {
         title: Text("Student"),
         elevation: 0,
       ),
-      body: Container(
-        //height: size.height * 0.3,
-        width: size.width,
-        decoration: BoxDecoration(
-          color: Colors.red,
-          borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(20)),
-        ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Align(
-              alignment: Alignment.topLeft,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 10),
-                child: Text(
-                  "Your subjects",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
+      body: Column(
+        //mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            width: size.width,
+            //height: size.height * 0.2,
+            decoration: BoxDecoration(
+              color: Colors.red,
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(10),
+                  bottomRight: Radius.circular(10)),
+            ),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 8,
+                  ),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      "Your subjects",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                physics: BouncingScrollPhysics(),
-                child: Row(
-                  children: [
-                    ScrollComponent(title: "Physics"),
-                    ScrollComponent(title: "Chemistry"),
-                    ScrollComponent(title: "Math"),
-                    ScrollComponent(title: "English"),
-                    ScrollComponent(title: "Bangla"),
-                    ScrollComponent(title: "ICT"),
-                  ],
+                SizedBox(
+                  height: 10,
                 ),
-              ),
+                SingleChildScrollView(
+                  physics: BouncingScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      ScrollComponent(title: "Physics"),
+                      ScrollComponent(title: "Physics"),
+                      ScrollComponent(title: "Physics"),
+                      ScrollComponent(title: "Physics"),
+                      ScrollComponent(title: "Physics"),
+                      ScrollComponent(title: "Physics"),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 10),
+              ],
             ),
-          ],
-        ),
+          ),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: 30,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      "Achievments",
+                      style: TextStyle(
+                        color: Colors.redAccent,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  color: Colors.redAccent,
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    physics: BouncingScrollPhysics(),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 2,
+                            right: 2,
+                            top: 5,
+                            bottom: 5,
+                          ),
+                          child: Container(
+                            width: size.width * 0.5,
+                            height: size.height * 0.4,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(5),
+                              ),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ListTile(
+                                  leading: Icon(Icons.done_all),
+                                  title: Text("First assignment"),
+                                  subtitle:
+                                      Text("Completed with excelent result"),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 2,
+                            right: 2,
+                            top: 5,
+                            bottom: 5,
+                          ),
+                          child: Container(
+                            width: size.width * 0.5,
+                            height: size.height * 0.4,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(5),
+                              ),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ListTile(
+                                  leading: Icon(Icons.done_all),
+                                  title: Text("First assignment"),
+                                  subtitle:
+                                      Text("Completed with excelent result"),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 2,
+                            right: 2,
+                            top: 5,
+                            bottom: 5,
+                          ),
+                          child: Container(
+                            width: size.width * 0.5,
+                            height: size.height * 0.4,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(5),
+                              ),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ListTile(
+                                  leading: Icon(Icons.done_all),
+                                  title: Text("First assignment"),
+                                  subtitle:
+                                      Text("Completed with excelent result"),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  "Current teachers",
+                  style: TextStyle(
+                    color: Colors.redAccent,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Expanded(
+                  child: Container(
+                    height: size.height,
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          ScrollComponent(
+                            title: "John Doe",
+                            color: Colors.redAccent,
+                            textColor: Colors.white,
+                          ),
+                          ScrollComponent(
+                            title: "John Doe",
+                            color: Colors.redAccent,
+                            textColor: Colors.white,
+                          ),
+                          ScrollComponent(
+                            title: "John Doe",
+                            color: Colors.redAccent,
+                            textColor: Colors.white,
+                          ),
+                          ScrollComponent(
+                            title: "John Doe",
+                            color: Colors.redAccent,
+                            textColor: Colors.white,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          )
+        ],
       ),
     );
   }
 }
 
 class ScrollComponent extends StatelessWidget {
-  const ScrollComponent({Key key, this.title}) : super(key: key);
+  const ScrollComponent(
+      {Key key,
+      this.title,
+      this.color = Colors.white,
+      this.textColor = Colors.black})
+      : super(key: key);
   final String title;
+  final Color color;
+  final Color textColor;
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(5.0),
       child: Container(
         child: Center(
-          child: Text(title),
+          child: Text(
+            title,
+            style: TextStyle(color: textColor),
+          ),
         ),
         height: 50,
         width: size.width * 0.3,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: color,
           borderRadius: BorderRadius.all(
             Radius.circular(20),
           ),
